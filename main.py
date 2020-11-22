@@ -6,8 +6,8 @@ from time import sleep
 # Replace following by your epd
 from waveshare_epd import epd7in5b_HD
 
-from src.eink_smart_clock import Display
-from src.eink_smart_clock.widgets import ClockWidget
+from eink_smart_clock import Display
+from eink_smart_clock.widgets import ClockWidget
 
 if __name__ == "__main__":
     
