@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 from datetime import datetime
+import logging
 import os
 from time import sleep
 # Replace following by your epd
@@ -9,16 +10,18 @@ from waveshare_epd import epd7in5b_HD
 from eink_smart_clock import Display
 from eink_smart_clock.widgets import ClockWidget
 
+logging.basicConfig(level=logging.DEBUG)
+
 if __name__ == "__main__":
     epd = epd7in5b_HD.EPD()
-    print("Initializing.")
+    logging.info("Initializing.")
     epd.init()
-    print("Clear screen.")
+    logging.info("Clear screen.")
     epd.Clear()
-    print("Setting up widgets.")
+    logging.info("Setting up widgets.")
     d = Display(epd, two_color=True)
     d.add_widget(ClockWidget(0, 0, d.width, d.height, os.path.join(os.curdir, "font/Roboto-Medium.ttf")))
-    print("Setup finished. Starting draw loop.")
+    logging.info("Setup finished. Starting draw loop.")
     try:
         while True:
             d.draw()
