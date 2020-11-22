@@ -10,12 +10,15 @@ from eink_smart_clock import Display
 from eink_smart_clock.widgets import ClockWidget
 
 if __name__ == "__main__":
-    
     epd = epd7in5b_HD.EPD()
+    print("Initializing.")
     epd.init()
+    print("Clear screen.")
     epd.Clear()
+    print("Setting up widgets.")
     d = Display(epd, two_color=True)
     d.add_widget(ClockWidget(0, 0, d.width, d.height, os.path.join(os.curdir, "font/Roboto-Medium.ttf")))
+    print("Setup finished. Starting draw loop.")
     try:
         while True:
             d.draw()
