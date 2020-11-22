@@ -1,1 +1,1 @@
-from font import fit_font
+from .font import fit_font

@@ -1,1 +1,1 @@
-from clock import ClockWidget
+from .clock import ClockWidget
