@@ -9,4 +9,5 @@ def fit_font(width, height, fontpath, text):
         font = ImageFont.truetype(fontpath, fontsize)
         size = font.getsize(text)
     fontsize -= 1
+    print("Determined font size as {}".format(fontsize))
     return ImageFont.truetype(fontpath, fontsize)

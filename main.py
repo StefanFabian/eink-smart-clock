@@ -25,4 +25,4 @@ if __name__ == "__main__":
             sleeptime = 60 - datetime.utcnow().second
             sleep(sleeptime)
     except KeyboardInterrupt:
-        pass
+        epd7in5b_HD.epdconfig.module_exit()
