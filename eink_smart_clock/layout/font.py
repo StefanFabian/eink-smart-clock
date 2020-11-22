@@ -1,4 +1,5 @@
 from PIL import ImageFont
+import logging
 
 def fit_font(width, height, fontpath, text):
     fontsize = 1
@@ -9,5 +10,5 @@ def fit_font(width, height, fontpath, text):
         font = ImageFont.truetype(fontpath, fontsize)
         size = font.getsize(text)
     fontsize -= 1
-    print("Determined font size as {}".format(fontsize))
+    logging.debug("Determined font size for w={}, h={}, text={} as {}".format(width, height, text, fontsize))
     return ImageFont.truetype(fontpath, fontsize)

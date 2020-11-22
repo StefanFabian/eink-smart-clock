@@ -9,10 +9,7 @@ class Display:
         self.widgets = []
 
     def add_widget(self, widget):
-        """
-        docstring
-        """
-        pass
+        self.widgets.append(widget)
 
     def draw(self):
         black_image = Image.new('1', (self.epd.width, self.epd.height), 255)  # 255: clear the frame
