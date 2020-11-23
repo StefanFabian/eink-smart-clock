@@ -7,7 +7,7 @@ from time import sleep
 # Replace following by your epd
 from waveshare_epd import epd7in5b_HD
 
-from eink_smart_clock import Display
+from eink_smart_clock import Display, WEATHER_API_KEY
 from eink_smart_clock.widgets import ClockWidget
 
 logging.basicConfig(level=logging.DEBUG)
